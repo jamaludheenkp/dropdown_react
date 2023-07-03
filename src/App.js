@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Dropdown from './Dropdown';
 
 function App() {
 return (
-   <h1>hello world</h1>
+   <div className='app'>
+      <Dropdown />
+   </div>
 );
 }
 

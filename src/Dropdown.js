@@ -24,7 +24,8 @@ function Dropdown() {
 
 
   return (
-    <div className='container'>
+    <div className='container text-center'>
+        <br />
         <select className='row form-control col-md-3' onChange={selectedChange}>
             <option value={0}>-- Select User --</option>
             {users.map((user) => (
@@ -32,26 +33,32 @@ function Dropdown() {
             ))}
         </select>
         <br /> <br />
-        <Table striped bordered hover>
-            <thead>
-                <tr>
-                    <td> ID </td>
-                    <td> Name </td>
-                    <td> User Name </td>
-                    <td> Email </td>
-                </tr>
-            </thead>
-            <tbody> 
-                {
+        <div className='table'>
+            <Table striped bordered hover>
+                <thead>
                     <tr>
-                        <td> {singleUser.id} </td>
-                        <td> {singleUser.name} </td>
-                        <td> {singleUser.username} </td>
-                        <td> {singleUser.email} </td>
+                        <td> ID </td>
+                        <td> Name </td>
+                        <td> User Name </td>
+                        <td> Email </td>
+                        <td> Phone </td>
+                        <td> Website </td>
                     </tr>
-                }
-            </tbody>
-        </Table>
+                </thead>
+                <tbody> 
+                    {
+                        <tr>
+                            <td> {singleUser.id} </td>
+                            <td> {singleUser.name} </td>
+                            <td> {singleUser.username} </td>
+                            <td> {singleUser.email} </td>
+                            <td> {singleUser.phone} </td>
+                            <td> {singleUser.website} </td>
+                        </tr>
+                    }
+                </tbody>
+            </Table>
+        </div>
     </div>
   )
 }

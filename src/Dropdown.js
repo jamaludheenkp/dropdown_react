@@ -27,7 +27,7 @@ function Dropdown() {
     <div className='container text-center'>
         <br />
         <select className='row form-control col-md-3' onChange={selectedChange}>
-            <option value={0}>-- Select User --</option>
+            <option className='options' value={0} >-- Select User --</option>
             {users.map((user) => (
                 <option value={user.id} key={user.id}> {user.name} </option> 
             ))}
